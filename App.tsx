@@ -32,7 +32,7 @@ const App = () => {
         component: () => <Text>Tab6 Data</Text>,
       },
     ],
-    maxTabsToShow: 3,
+    maxTabsToShow: 2,
   }
 
   return (
