@@ -9,6 +9,7 @@
 import React from 'react'
 import { SafeAreaView, Text } from 'react-native'
 import { DynamicTabs } from './components'
+import { Styles } from './Styles'
 
 const App = () => {
   const data = {
@@ -38,10 +39,10 @@ const App = () => {
         component: <Text>Tab6 Data</Text>,
       },
     ],
-    maxTabToShow: 3,
+    maxTabToShow: 5,
   }
   return (
-    <SafeAreaView>
+    <SafeAreaView styles={Styles.container}>
       <DynamicTabs DynamicTabsProps={data} />
     </SafeAreaView>
   )
