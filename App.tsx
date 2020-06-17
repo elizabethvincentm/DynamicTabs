@@ -39,7 +39,7 @@ const App = () => {
         component: () => <Text>Tab6 Data</Text>,
       },
     ],
-    maxTabsToShow: 5,
+    maxTabsToShow: 2,
   }
   return (
     <SafeAreaView style={Styles.container}>
