@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { View } from 'react-native'
 import { Styles } from '../Styles'
 import { DynamicTabsProps } from '../types/DynamicTabsTypes'
-import { TabBar, TabModal } from '../components'
+import { TabModal } from './TabModal'
+import { TabBar } from './TabBar'
 
 export const DynamicTabs: React.FC<DynamicTabsProps> = ({
   config,
