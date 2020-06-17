@@ -1,5 +1,10 @@
 import { StyleSheet, Dimensions } from 'react-native'
 
+export const COLOR_LIGHT = '#96D3FF'
+export const COLOR_MEDIUM = '#4BB4FF'
+export const COLOR_DARK = '#3B90CC'
+export const COLOR_BORDER = '#255A80'
+
 export const Styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -20,10 +25,10 @@ export const Styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#4BB4FF',
+    backgroundColor: COLOR_MEDIUM,
     borderTopRightRadius: 5,
     borderTopLeftRadius: 5,
-    borderRightColor: '#255A80',
+    borderRightColor: COLOR_BORDER,
     borderRightWidth: 0.5,
   },
   dynamicTabHeaderMenuIcon: {
@@ -38,7 +43,7 @@ export const Styles = StyleSheet.create({
     textAlign: 'center',
   },
   dynamicTabComponentView: {
-    backgroundColor: '#96D3FF',
+    backgroundColor: COLOR_LIGHT,
     padding: 20,
     minHeight: Dimensions.get('window').height * 0.3,
     justifyContent: 'center',
@@ -46,8 +51,8 @@ export const Styles = StyleSheet.create({
   },
   dynamicTabModalView: {
     padding: 20,
-    backgroundColor: '#3B90CC',
-    borderBottomColor: '#255A80',
+    backgroundColor: COLOR_DARK,
+    borderBottomColor: COLOR_BORDER,
     borderBottomWidth: 0.5,
   },
   dynamicTabModalText: {

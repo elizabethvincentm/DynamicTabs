@@ -12,7 +12,7 @@ export const TabBar: React.SFC<TabBarProps> = ({
   setSelectedTabIndex,
   setAllTabsVisible,
 }) => (
-  <View style={Styles.dynamicTabHeader}>
+  <View testID="tab-bar" style={Styles.dynamicTabHeader}>
     {config
       .slice(lastTab - maxTabsToShow, lastTab)
       .map((tab: DynamicTabConfig, tabIndex: number) => (
@@ -39,7 +39,7 @@ export const TabBar: React.SFC<TabBarProps> = ({
       style={Styles.dynamicTabHeaderMenuIcon}
       onPress={() => setAllTabsVisible(true)}
     >
-      <MenuIcon />
+      <MenuIcon testID="menu-icon" />
     </TouchableOpacity>
   </View>
 )
