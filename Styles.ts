@@ -3,11 +3,11 @@ import { StyleSheet, Dimensions } from 'react-native'
 export const Styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: Dimensions.get('window').width,
   },
   dynamicTabView: {
     paddingTop: 10,
     paddingBottom: 10,
-    // flex: 1,
   },
   dynamicTabHeader: {
     flexDirection: 'row',
@@ -29,14 +29,9 @@ export const Styles = StyleSheet.create({
   dynamicTabHeaderMenuIcon: {
     paddingBottom: 20,
     paddingTop: 20,
-    flex: 1,
+    flex: 0.5,
     justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor: '#4BB4FF',
-    // borderTopRightRadius: 5,
-    // borderTopLeftRadius: 5,
-    // borderRightColor: '#255A80',
-    // borderRightWidth: 0.5,
   },
   dynamicTabHeaderItemText: {
     fontSize: 16,
@@ -50,20 +45,10 @@ export const Styles = StyleSheet.create({
     alignItems: 'center',
   },
   dynamicTabModalView: {
-    //width: Dimensions.get('window').width * 0.8,
     padding: 20,
-    //flex: 1,
     backgroundColor: '#3B90CC',
     borderBottomColor: '#255A80',
     borderBottomWidth: 0.5,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
   },
   dynamicTabModalText: {
     fontSize: 20,

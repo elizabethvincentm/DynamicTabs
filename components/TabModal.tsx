@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { View, Text, TouchableOpacity, Modal } from 'react-native'
+import React from 'react'
+import { Text, TouchableOpacity, Modal } from 'react-native'
 import { Styles } from '../Styles'
 
 import { TabModalProps, DynamicTabConfig } from '../types/DynamicTabsTypes'
