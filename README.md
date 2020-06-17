@@ -10,7 +10,7 @@ In the project directory, you can run:
 
 Initializes the project
 
-### npx react-native run-android
+### `npx react-native run-android`
 
 Runs the android app on connected emulator
 
@@ -18,6 +18,6 @@ Runs the android app on connected emulator
 
 Launches the test runner
 
-### yarn tsc
+### `yarn tsc`
 
 Compiles typescript files
