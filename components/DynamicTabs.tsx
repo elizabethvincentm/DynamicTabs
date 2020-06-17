@@ -1,14 +1,30 @@
 import React, { useState } from 'react'
 import { View, Text, TouchableOpacity, Modal } from 'react-native'
-
 import { Styles } from '../Styles'
 import MenuIcon from '../assets/menu.svg'
 
-export const DynamicTabs = ({ DynamicTabsProps }) => {
-  const { config, maxTabToShow } = DynamicTabsProps
-  const [selectedTabIndex, setSelectedTabIndex] = useState(0)
-  const [lastTab, setLastTab] = useState(maxTabToShow)
-  const [allTabsVisible, setAllTabsVisible] = useState(false)
+type DynamicTabConfig = {
+  // title of the tab - tab name
+  title: string
+  // Component to mount/show on the tab screen when tab is active
+  component: React.ComponentType<{}>
+}
+
+interface DynamicTabsProps {
+  // tab configuration
+  config: Array<DynamicTabConfig>
+  // max tabs to show on the screen at a time
+  maxTabsToShow: number
+}
+
+export const DynamicTabs: React.FC<DynamicTabsProps> = ({
+  config,
+  maxTabsToShow,
+}) => {
+  const [selectedTabIndex, setSelectedTabIndex] = useState<number>(0)
+  const [lastTab, setLastTab] = useState<number>(maxTabsToShow)
+  const [allTabsVisible, setAllTabsVisible] = useState<boolean>(false)
+
   return (
     <View style={Styles.dynamicTabView}>
       <Modal
@@ -32,7 +48,7 @@ export const DynamicTabs = ({ DynamicTabsProps }) => {
               key={tabIndex}
               onPress={() => {
                 setLastTab(() =>
-                  tabIndex >= maxTabToShow ? tabIndex + 1 : maxTabToShow
+                  tabIndex >= maxTabsToShow ? tabIndex + 1 : maxTabsToShow
                 )
                 setSelectedTabIndex(tabIndex)
                 setAllTabsVisible(false)
@@ -45,21 +61,21 @@ export const DynamicTabs = ({ DynamicTabsProps }) => {
       </Modal>
 
       <View style={Styles.dynamicTabHeader}>
-        {config.slice(lastTab - maxTabToShow, lastTab).map((tab, tabIndex) => (
+        {config.slice(lastTab - maxTabsToShow, lastTab).map((tab, tabIndex) => (
           <TouchableOpacity
             style={{
               ...Styles.dynamicTabHeaderItemView,
               borderBottomWidth:
-                tabIndex + lastTab - maxTabToShow === selectedTabIndex ? 2 : 0,
+                tabIndex + lastTab - maxTabsToShow === selectedTabIndex ? 2 : 0,
 
               borderBottomColor:
-                tabIndex + lastTab - maxTabToShow === selectedTabIndex
+                tabIndex + lastTab - maxTabsToShow === selectedTabIndex
                   ? '#255A80'
                   : '#4BB4FF',
             }}
             key={tabIndex}
             onPress={() =>
-              setSelectedTabIndex(tabIndex + lastTab - maxTabToShow)
+              setSelectedTabIndex(tabIndex + lastTab - maxTabsToShow)
             }
           >
             <Text style={Styles.dynamicTabHeaderItemText}>{tab.title}</Text>
