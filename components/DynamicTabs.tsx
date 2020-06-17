@@ -7,7 +7,7 @@ type DynamicTabConfig = {
   // title of the tab - tab name
   title: string
   // Component to mount/show on the tab screen when tab is active
-  component: React.ComponentType<{}>
+  component: React.ComponentType
 }
 
 interface DynamicTabsProps {
@@ -17,6 +17,11 @@ interface DynamicTabsProps {
   maxTabsToShow: number
 }
 
+const updateTabComponent = (TabComponent: React.ComponentType) => {
+  return () => {
+    return <TabComponent />
+  }
+}
 export const DynamicTabs: React.FC<DynamicTabsProps> = ({
   config,
   maxTabsToShow,
@@ -24,7 +29,9 @@ export const DynamicTabs: React.FC<DynamicTabsProps> = ({
   const [selectedTabIndex, setSelectedTabIndex] = useState<number>(0)
   const [lastTab, setLastTab] = useState<number>(maxTabsToShow)
   const [allTabsVisible, setAllTabsVisible] = useState<boolean>(false)
-
+  const EnhancedComponent = updateTabComponent(
+    config[selectedTabIndex].component
+  )
   return (
     <View style={Styles.dynamicTabView}>
       <Modal
@@ -90,7 +97,7 @@ export const DynamicTabs: React.FC<DynamicTabsProps> = ({
         </TouchableOpacity>
       </View>
       <View style={Styles.dynamicTabComponentView}>
-        {config[selectedTabIndex].component}
+        <EnhancedComponent />
       </View>
     </View>
   )

@@ -1,8 +1,13 @@
 import { StyleSheet, Dimensions } from 'react-native'
 
 export const Styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   dynamicTabView: {
-    padding: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    // flex: 1,
   },
   dynamicTabHeader: {
     flexDirection: 'row',
