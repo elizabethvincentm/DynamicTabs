@@ -1,17 +1,10 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react'
 import { SafeAreaView, View, Text } from 'react-native'
 import { DynamicTabs } from './components'
 import { Styles } from './Styles'
 
 const App = () => {
+  //dummy data
   const tabData = {
     config: [
       {
@@ -39,8 +32,9 @@ const App = () => {
         component: () => <Text>Tab6 Data</Text>,
       },
     ],
-    maxTabsToShow: 2,
+    maxTabsToShow: 3,
   }
+
   return (
     <SafeAreaView style={Styles.container}>
       <DynamicTabs
