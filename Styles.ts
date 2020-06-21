@@ -11,6 +11,7 @@ export const Styles = StyleSheet.create({
     width: Dimensions.get('window').width,
   },
   dynamicTabView: {
+    flex: 1,
     paddingTop: 10,
     paddingBottom: 10,
   },

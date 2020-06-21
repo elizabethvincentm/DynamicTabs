@@ -32,12 +32,14 @@ export const DynamicTabs: React.FC<DynamicTabsProps> = ({
 
   const TabComponent = config[selectedTabIndex].component
   return (
-    <View style={Styles.dynamicTabView}>
-      <TabModal {...tabModalProps} />
-      <TabBar {...tabBarProps} />
-      <View style={Styles.dynamicTabComponentView}>
-        <TabComponent />
+    <>
+      <View style={{ ...Styles.dynamicTabView, elevation: 0 }}>
+        <TabModal {...tabModalProps} />
+        <TabBar {...tabBarProps} />
+        <View style={Styles.dynamicTabComponentView}>
+          <TabComponent />
+        </View>
       </View>
-    </View>
+    </>
   )
 }
