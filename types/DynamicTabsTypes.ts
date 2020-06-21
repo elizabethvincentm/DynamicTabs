@@ -17,6 +17,8 @@ export interface TabBarProps {
   maxTabsToShow: number
   // index of last tab displayed on tab bar
   lastTab: number
+  // index of last tab displayed on tab bar
+  allTabsVisible: boolean
   //index of selected tab
   selectedTabIndex: number
   //setter for selectedTabIndex

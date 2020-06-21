@@ -1,13 +1,15 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
-import { Styles } from '../Styles'
+import { Styles, COLOR_DARK, COLOR_BORDER } from '../Styles'
 import MenuIcon from '../assets/menu.svg'
+import CloseIcon from '../assets/close.svg'
 import { TabBarProps, DynamicTabConfig } from '../types/DynamicTabsTypes'
 
 export const TabBar: React.SFC<TabBarProps> = ({
   config,
   maxTabsToShow,
   lastTab,
+  allTabsVisible,
   selectedTabIndex,
   setSelectedTabIndex,
   setAllTabsVisible,
@@ -19,12 +21,10 @@ export const TabBar: React.SFC<TabBarProps> = ({
         <TouchableOpacity
           style={{
             ...Styles.dynamicTabHeaderItemView,
-            borderBottomWidth:
-              tabIndex + lastTab - maxTabsToShow === selectedTabIndex ? 3 : 0,
-            borderBottomColor:
+            backgroundColor:
               tabIndex + lastTab - maxTabsToShow === selectedTabIndex
-                ? '#255A80'
-                : '#4BB4FF',
+                ? COLOR_BORDER
+                : COLOR_DARK,
           }}
           key={tabIndex}
           onPress={() =>
@@ -39,7 +39,7 @@ export const TabBar: React.SFC<TabBarProps> = ({
       style={Styles.dynamicTabHeaderMenuIcon}
       onPress={() => setAllTabsVisible((prev: boolean) => !prev)}
     >
-      <MenuIcon testID="menu-icon" />
+      {allTabsVisible ? <CloseIcon /> : <MenuIcon testID="menu-icon" />}
     </TouchableOpacity>
   </View>
 )

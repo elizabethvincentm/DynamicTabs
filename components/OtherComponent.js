@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
 import { View, Text } from 'react-native'
-import { Styles, COLOR_MEDIUM } from '../Styles'
+import { Styles, COLOR_MEDIUM, COLOR_DARK } from '../Styles'
 
 export const OtherComponent = () => {
   return (
     <>
       <View
         style={{
-          backgroundColor: COLOR_MEDIUM,
+          backgroundColor: COLOR_DARK,
           padding: 20,
           marginBottom: 20,
         }}
       >
-        <Text style={{ fontSize: 28 }}>Top Programming Languages</Text>
+        <Text style={{ fontSize: 28, color: 'white' }}>
+          Top Programming Languages
+        </Text>
       </View>
       <View
         style={{

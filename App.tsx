@@ -1,7 +1,7 @@
 import React from 'react'
-import { SafeAreaView, View, Text, ScrollView } from 'react-native'
+import { SafeAreaView, View, Text, ScrollView, StatusBar } from 'react-native'
 import { DynamicTabs } from './components'
-import { Styles } from './Styles'
+import { Styles, COLOR_BORDER } from './Styles'
 import { OtherComponent } from './components/OtherComponent'
 
 const App = () => {
@@ -101,11 +101,12 @@ const App = () => {
         ),
       },
     ],
-    maxTabsToShow: 2,
+    maxTabsToShow: 4,
   }
 
   return (
     <SafeAreaView style={Styles.container}>
+      <StatusBar backgroundColor={COLOR_BORDER} />
       <ScrollView>
         <OtherComponent />
         <DynamicTabs
