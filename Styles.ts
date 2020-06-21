@@ -12,8 +12,6 @@ export const Styles = StyleSheet.create({
   },
   dynamicTabView: {
     flex: 1,
-    paddingTop: 10,
-    paddingBottom: 10,
   },
   dynamicTabHeader: {
     flexDirection: 'row',
@@ -55,10 +53,9 @@ export const Styles = StyleSheet.create({
     textAlign: 'center',
   },
   dynamicTabComponentView: {
-    backgroundColor: COLOR_LIGHT,
     padding: 20,
-    justifyContent: 'center',
     alignItems: 'center',
+    minHeight: Dimensions.get('screen').height * 0.5,
   },
   dynamicTabModalView: {
     padding: 10,

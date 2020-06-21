@@ -20,7 +20,7 @@ export const TabBar: React.SFC<TabBarProps> = ({
           style={{
             ...Styles.dynamicTabHeaderItemView,
             borderBottomWidth:
-              tabIndex + lastTab - maxTabsToShow === selectedTabIndex ? 2 : 0,
+              tabIndex + lastTab - maxTabsToShow === selectedTabIndex ? 3 : 0,
             borderBottomColor:
               tabIndex + lastTab - maxTabsToShow === selectedTabIndex
                 ? '#255A80'

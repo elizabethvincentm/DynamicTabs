@@ -101,7 +101,7 @@ const App = () => {
         ),
       },
     ],
-    maxTabsToShow: 1,
+    maxTabsToShow: 2,
   }
 
   return (
