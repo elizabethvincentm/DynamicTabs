@@ -37,7 +37,7 @@ export const TabBar: React.SFC<TabBarProps> = ({
 
     <TouchableOpacity
       style={Styles.dynamicTabHeaderMenuIcon}
-      onPress={() => setAllTabsVisible(true)}
+      onPress={() => setAllTabsVisible((prev: boolean) => !prev)}
     >
       <MenuIcon testID="menu-icon" />
     </TouchableOpacity>

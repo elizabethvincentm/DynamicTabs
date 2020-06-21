@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import { Styles } from '../Styles'
 import { DynamicTabsProps } from '../types/DynamicTabsTypes'
 import { TabModal } from './TabModal'
@@ -25,6 +25,8 @@ export const DynamicTabs: React.FC<DynamicTabsProps> = ({
     config,
     maxTabsToShow,
     allTabsVisible,
+    lastTab,
+    selectedTabIndex,
     setLastTab,
     setSelectedTabIndex,
     setAllTabsVisible,
