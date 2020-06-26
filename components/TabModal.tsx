@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
-import { Styles, COLOR_BORDER, COLOR_DARK } from '../Styles'
+import { Styles, COLOR_LIGHT, COLOR_WHITE } from '../Styles'
 import { TabModalProps, DynamicTabConfig } from '../types/DynamicTabsTypes'
 import { SlideInScrollView } from '../animations/SlideInScrollView'
 
@@ -28,7 +28,7 @@ export const TabModal: React.SFC<TabModalProps> = ({
                 style={{
                   ...Styles.dynamicTabModalItem,
                   backgroundColor:
-                    tabIndex === selectedTabIndex ? COLOR_BORDER : COLOR_DARK,
+                    tabIndex === selectedTabIndex ? COLOR_LIGHT : COLOR_WHITE,
                 }}
                 key={tabIndex}
                 onPress={() => {

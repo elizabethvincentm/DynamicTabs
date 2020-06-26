@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { View, Text } from 'react-native'
-import { Styles, COLOR_MEDIUM, COLOR_DARK } from '../Styles'
+import { COLOR_DARK } from '../Styles'
 
 export const OtherComponent = () => {
   return (
@@ -27,11 +27,11 @@ export const OtherComponent = () => {
           well-known to the ultra-obscure, and gaining fluency with one or more
           is a must if you want to make yourself a hot ticket for employers and
           score awesome coding jobs. Sure, there are plenty of colleges and
-          universities offering coding courses and degrees, along with tech
-          bootcamps for those who want to learn outside of traditional
-          university settings. But deciding where to specialize can be a
-          daunting choice for beginning coders—as well as more experienced ones
-          who want to stay on top of the latest trends in the IT world.
+          universities offering coding courses and degrees, along with tech boot
+          camps for those who want to learn outside of traditional university
+          settings. But deciding where to specialize can be a daunting choice
+          for beginning coders—as well as more experienced ones who want to stay
+          on top of the latest trends in the IT world.
         </Text>
       </View>
     </>

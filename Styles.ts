@@ -4,7 +4,8 @@ export const COLOR_LIGHT = '#96D3FF'
 export const COLOR_MEDIUM = '#4BB4FF'
 export const COLOR_DARK = '#3B90CC'
 export const COLOR_BORDER = '#255A80'
-export const COLOR_HEADER = '#cfcfcf'
+export const COLOR_GREY = '#cfcfcf'
+export const COLOR_WHITE = '#ebebeb'
 
 export const Styles = StyleSheet.create({
   container: {
@@ -45,7 +46,7 @@ export const Styles = StyleSheet.create({
   dynamicTabComponentHeader: {
     fontSize: 24,
     padding: 10,
-    backgroundColor: COLOR_HEADER,
+    backgroundColor: COLOR_GREY,
     textAlign: 'center',
     fontWeight: 'bold',
     letterSpacing: 1.2,
@@ -69,7 +70,7 @@ export const Styles = StyleSheet.create({
     padding: 10,
     backgroundColor: COLOR_DARK,
     borderBottomWidth: 0.5,
-    borderBottomColor: COLOR_BORDER,
+    borderBottomColor: COLOR_LIGHT,
   },
   dynamicTabModalView: {
     shadowColor: '#000',
@@ -85,7 +86,6 @@ export const Styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     textAlignVertical: 'center',
-    color: 'white',
   },
   slideInScrollViewStyle: {
     flex: 1,
